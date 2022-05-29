@@ -7,7 +7,7 @@ def extract_data(extract):
     else:
         new_data={}
         new_data['CO2 per capita']=scan_file['CO2 per capita']
-        data = open('C:/Users/lenovo/Desktop/python/projects/CO2 emission/Emissions_subset.csv','w')
+        data = open('Emissions_subset.csv','w')
         for countries in extract:
             countries = countries.capitalize()
             if countries not in scan_file.keys():
@@ -26,7 +26,7 @@ print("A Simple Data Analysis Program")
 print()
 try:
     scan_file = {}
-    file_handle= open('C:/Users/lenovo/Desktop/python/projects/CO2 emission/Emissions.csv','r')
+    file_handle= open('Emissions.csv','r')
     for row in file_handle:
         scan_file[row.strip().split(',')[0]]=row.strip().split(',')[1:]
     print("All data from Emissions.csv has been read into a dictionary.\n")
